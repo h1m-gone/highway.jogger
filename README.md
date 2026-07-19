@@ -8,3 +8,7 @@ a whole two hours in and so far ive got a player, a lane switching mechaninc, an
 kinda fixed the lane switching but its stil breakable, but you can save it so i added a color so hopefully u can common sense ur way out of it
 <br>
 also added an enemy then fixed detection for it, then broke it, now im just kinda confused so im calling it quits for today!
+<br>
+okkkk
+<br>
+broke the detection further then fixed it almost immediately, added a health bar and a taco truck to heal you back, cause why not, also, started working on a intro cutscene but still tryna make it flow nicely with the actual game
