@@ -12,3 +12,7 @@ also added an enemy then fixed detection for it, then broke it, now im just kind
 okkkk
 <br>
 broke the detection further then fixed it almost immediately, added a health bar and a taco truck to heal you back, cause why not, also, started working on a intro cutscene but still tryna make it flow nicely with the actual game
+<br>
+back again with good news, most broken things are now un broken!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<br>
+most things are still a little janky but i think its fine, done for today, future things are sound(completely silent now) also adding gameplay mechanics now that basic physics of the player and enemies/collections are figured out
