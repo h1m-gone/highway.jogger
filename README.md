@@ -1,5 +1,5 @@
 # highway.jogger
-this is for my 2nd maconado project,
+this is for my 2nd maconado project, to set up in godot, just drop all everything into a project folder, should just work like that, assests were moved out of their folders so that might be an issue, but i didn;t use many so if it dosent work that might be the issue
 <br>
 today i started and got some assests, also set up the parallax background toooo....
 <br>
