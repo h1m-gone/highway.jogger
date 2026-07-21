@@ -16,3 +16,5 @@ broke the detection further then fixed it almost immediately, added a health bar
 back again with good news, most broken things are now un broken!!!!!!!!!!!!!!!!!!!!!!!!!!!
 <br>
 most things are still a little janky but i think its fine, done for today, future things are sound(completely silent now) also adding gameplay mechanics now that basic physics of the player and enemies/collections are figured out
+<br>
+ok, so i missed day four but im back on day five and ready to submit, its short and sweet but i think a fun idea, somethings that i wanted to add like some explosion effects didn't work, im sure it was how i wanted to implement it but, maybe next time,
