@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://chldhca113qo2"]
+
+[ext_resource type="Texture2D" uid="uid://1yiojm4iisxk" path="res://706874.png" id="1_16rk1"]
+
+[sub_resource type="GDScript" id="GDScript_8cye3"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+
+func no():
+	pass
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_16rk1"]
+height = 25.28949
+
+[node name="taco" type="CharacterBody2D" unique_id=406714753]
+script = SubResource("GDScript_8cye3")
+
+[node name="706874" type="Sprite2D" parent="." unique_id=1154682100]
+position = Vector2(125, 125)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_16rk1")
+
+[node name="1" type="CollisionShape2D" parent="." unique_id=299554227]
+position = Vector2(126.66667, 133.33334)
+rotation = -0.48145467
+scale = Vector2(4.467005, -3.5539505)
+shape = SubResource("CapsuleShape2D_16rk1")

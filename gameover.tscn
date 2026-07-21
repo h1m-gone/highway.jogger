@@ -1,0 +1,256 @@
+[gd_scene format=3 uid="uid://7lahmb717ypg"]
+
+[ext_resource type="Texture2D" uid="uid://6llcwb1hl6gf" path="res://StickmanPack/Jump/JumpDown.png" id="1_kctv7"]
+[ext_resource type="Texture2D" uid="uid://cclygta1vyjcf" path="res://StickmanPack/Idle/Thin.png" id="2_2nw6q"]
+[ext_resource type="Texture2D" uid="uid://bolem6203wtql" path="res://StickmanPack/Jump/Jump.png" id="3_w3x71"]
+[ext_resource type="Texture2D" uid="uid://dxs5v174jucra" path="res://StickmanPack/Run/Run.png" id="4_af4fq"]
+[ext_resource type="AudioStream" uid="uid://rdwav7g6qd67" path="res://losebuthappy.mp3" id="5_2nw6q"]
+
+[sub_resource type="GDScript" id="GDScript_i5q7f"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	$\"ColorRect2/ani\".play(\"idle\")
+
+
+func yes() -> void:
+	get_tree().change_scene_to_file(\"res://level.tscn\")
+
+func no() -> void:
+	$Button2/Label.visible=true
+	await get_tree().create_timer(1).timeout
+	$Button2/Label.visible=false
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0b2gh"]
+atlas = ExtResource("1_kctv7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_br20p"]
+atlas = ExtResource("2_2nw6q")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikggu"]
+atlas = ExtResource("2_2nw6q")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo4fy"]
+atlas = ExtResource("2_2nw6q")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jena"]
+atlas = ExtResource("2_2nw6q")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8eeux"]
+atlas = ExtResource("2_2nw6q")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8fbj"]
+atlas = ExtResource("2_2nw6q")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvnb7"]
+atlas = ExtResource("3_w3x71")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stp2l"]
+atlas = ExtResource("3_w3x71")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bohcm"]
+atlas = ExtResource("3_w3x71")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otfsf"]
+atlas = ExtResource("4_af4fq")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7126n"]
+atlas = ExtResource("4_af4fq")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kodjm"]
+atlas = ExtResource("4_af4fq")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nba1g"]
+atlas = ExtResource("4_af4fq")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02sft"]
+atlas = ExtResource("4_af4fq")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chlff"]
+atlas = ExtResource("4_af4fq")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67gxr"]
+atlas = ExtResource("4_af4fq")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epkjv"]
+atlas = ExtResource("4_af4fq")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcryl"]
+atlas = ExtResource("4_af4fq")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g1o2j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0b2gh")
+}],
+"loop": 1,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_br20p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikggu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo4fy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jena")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8eeux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8fbj")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 13.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvnb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stp2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bohcm")
+}],
+"loop": 0,
+"name": &"jump",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otfsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7126n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kodjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nba1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02sft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chlff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67gxr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epkjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcryl")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 25.0
+}]
+
+[node name="gameover" type="Node2D" unique_id=1560089484]
+script = SubResource("GDScript_i5q7f")
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=135004722]
+offset_right = 1184.0
+offset_bottom = 697.0
+color = Color(1, 0.45882353, 0.5176471, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1428228404]
+offset_left = 454.00006
+offset_top = 240.0
+offset_right = 494.00006
+offset_bottom = 280.0
+scale = Vector2(3.8117363, 0.67211837)
+color = Color(0.95842355, 0.0006212236, 0.1364465, 0.38039216)
+
+[node name="Label" type="Label" parent="." unique_id=973564772]
+offset_left = 456.0
+offset_top = 241.0
+offset_right = 607.0
+offset_bottom = 264.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "you died, try again?"
+
+[node name="Button" type="Button" parent="." unique_id=792822619]
+offset_left = 285.0
+offset_top = 365.0
+offset_right = 325.0
+offset_bottom = 396.0
+text = "YES!"
+
+[node name="Button2" type="Button" parent="." unique_id=1651194357]
+offset_left = 732.0
+offset_top = 365.0
+offset_right = 872.0
+offset_bottom = 419.0
+text = "No, I wanna quit,
+this is garbage"
+
+[node name="Label" type="Label" parent="Button2" unique_id=1381757691]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 85.0
+offset_right = 143.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "nop, you can't quit"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1600327696]
+offset_left = 471.0
+offset_top = 338.0
+offset_right = 511.0
+offset_bottom = 378.0
+scale = Vector2(2.2673059, 4.4951487)
+
+[node name="ani" type="AnimatedSprite2D" parent="ColorRect2" unique_id=332213434]
+position = Vector2(23.99408, 16.770187)
+scale = Vector2(1.2628485, 0.6450064)
+sprite_frames = SubResource("SpriteFrames_g1o2j")
+animation = &"idle"
+frame_progress = 0.3182681
+
+[node name="Losebuthappy" type="AudioStreamPlayer" parent="." unique_id=104733968]
+stream = ExtResource("5_2nw6q")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="yes"]
+[connection signal="pressed" from="Button2" to="." method="no"]

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://8ds43h7uhqrp"]
+
+[ext_resource type="Texture2D" uid="uid://odkfjc5osr1f" path="res://download-removebg-preview.png" id="1_bkce2"]
+
+[node name="life" type="Sprite2D" unique_id=131343365]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1229676133]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(8.151515, 2.452381)
+color = Color(1, 1, 1, 0.20392157)
+
+[node name="3" type="Sprite2D" parent="." unique_id=38034451]
+
+[node name="DownloadRemovebgPreview" type="Sprite2D" parent="3" unique_id=907417066]
+position = Vector2(58, 49)
+texture = ExtResource("1_bkce2")
+
+[node name="DownloadRemovebgPreview2" type="Sprite2D" parent="3" unique_id=1896431766]
+position = Vector2(164, 50)
+texture = ExtResource("1_bkce2")
+
+[node name="DownloadRemovebgPreview3" type="Sprite2D" parent="3" unique_id=857322292]
+position = Vector2(272, 52)
+texture = ExtResource("1_bkce2")
+
+[node name="4" type="Sprite2D" parent="." unique_id=1245311446]
+visible = false
+
+[node name="DownloadRemovebgPreview" type="Sprite2D" parent="4" unique_id=1934666218]
+position = Vector2(58, 49)
+texture = ExtResource("1_bkce2")
+
+[node name="DownloadRemovebgPreview2" type="Sprite2D" parent="4" unique_id=1091076234]
+position = Vector2(164, 50)
+texture = ExtResource("1_bkce2")
+
+[node name="5" type="Sprite2D" parent="." unique_id=2020923678]
+visible = false
+
+[node name="DownloadRemovebgPreview" type="Sprite2D" parent="5" unique_id=506625468]
+position = Vector2(58, 49)
+texture = ExtResource("1_bkce2")

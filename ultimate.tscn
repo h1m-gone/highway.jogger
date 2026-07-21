@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://kyne62frtwgs"]
+
+[ext_resource type="Script" uid="uid://djkiv1a51kx6o" path="res://ultimate.gd" id="1_ts36k"]
+
+[node name="ultimate" type="Node2D" unique_id=1400491624]
+script = ExtResource("1_ts36k")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=14592177]
+offset_left = -4.0
+offset_top = -7.0
+offset_right = 36.0
+offset_bottom = 33.0
+scale = Vector2(30.071512, 17.293041)
+color = Color(0.63761073, 0.7810007, 0.73843426, 1)
+
+[node name="Label" type="Label" parent="." unique_id=603613345]
+offset_left = 426.00006
+offset_top = 278.0
+offset_right = 580.00006
+offset_bottom = 301.0
+scale = Vector2(1.7810138, 1.8286844)
+text = "Nope, thats all folks"
+
+[node name="Timer" type="Timer" parent="." unique_id=1065670441]
+wait_time = 0.75
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

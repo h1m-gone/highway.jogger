@@ -1,0 +1,379 @@
+[gd_scene format=3 uid="uid://btu70usqdii08"]
+
+[ext_resource type="Script" uid="uid://cce1lx3k5cgl8" path="res://level_2.gd" id="1_btc8u"]
+[ext_resource type="Texture2D" uid="uid://5wu4jgf08xrk" path="res://assetpack/parallax/city night/parallaxcitysky.png" id="2_2pufk"]
+[ext_resource type="Texture2D" uid="uid://bvu5n2q8spq74" path="res://assetpack/parallax/city night/parallaxcitybackgroundmountain.png" id="3_btc8u"]
+[ext_resource type="Texture2D" uid="uid://dn7radht34lpe" path="res://assetpack/parallax/city night/parallaxcitybackgroundmountain2.png" id="4_ikghu"]
+[ext_resource type="Texture2D" uid="uid://70wujdeqcp01" path="res://assetpack/parallax/city night/parallaxcitywater.png" id="5_i6smf"]
+[ext_resource type="Texture2D" uid="uid://b2b5famthwtwq" path="res://assetpack/parallax/city night/parallaxcitywaterreflexion.png" id="6_d4rhq"]
+[ext_resource type="Texture2D" uid="uid://e7wardr0emx6" path="res://Screenshot 2026-07-08 152136.png" id="7_ldfcd"]
+[ext_resource type="PackedScene" uid="uid://cn517gmwx716f" path="res://ene.tscn" id="8_41lt0"]
+[ext_resource type="Texture2D" uid="uid://lfmci4sgi8su" path="res://Explosion/1.png" id="9_t8cg7"]
+[ext_resource type="Texture2D" uid="uid://omqpop05a2pq" path="res://Explosion/2.png" id="10_o5ykh"]
+[ext_resource type="Texture2D" uid="uid://c1v5vd4uob6uu" path="res://Explosion/3.png" id="11_e6ygx"]
+[ext_resource type="Texture2D" uid="uid://b8ewuj1mbwrbb" path="res://Explosion/4.png" id="12_xlxjt"]
+[ext_resource type="Texture2D" uid="uid://b1ytw7f26l7kd" path="res://Explosion/5.png" id="13_aocai"]
+[ext_resource type="Texture2D" uid="uid://b4wp0vb5url8x" path="res://Explosion/6.png" id="14_xwl8u"]
+[ext_resource type="Texture2D" uid="uid://do51nbrpraegx" path="res://Explosion/7.png" id="15_3pas5"]
+[ext_resource type="Texture2D" uid="uid://ioc7c38qwo8j" path="res://Explosion/8.png" id="16_u1jey"]
+[ext_resource type="Texture2D" uid="uid://c78ki0x3odk8j" path="res://Explosion/9.png" id="17_51w4t"]
+[ext_resource type="Texture2D" uid="uid://c1cctlkty57vx" path="res://Explosion/10.png" id="18_ddgyg"]
+[ext_resource type="Texture2D" uid="uid://bdfodqn8s3fa0" path="res://Explosion/11.png" id="19_qh630"]
+[ext_resource type="Texture2D" uid="uid://b330ln7krxyv6" path="res://Explosion/12.png" id="20_uv8er"]
+[ext_resource type="PackedScene" uid="uid://dxodowdvfhyqa" path="res://mainchar.tscn" id="21_653n8"]
+[ext_resource type="PackedScene" uid="uid://8ds43h7uhqrp" path="res://life.tscn" id="22_eqpf5"]
+[ext_resource type="Texture2D" uid="uid://cqs6qoygyhvhf" path="res://a.png" id="23_qm6bn"]
+[ext_resource type="PackedScene" uid="uid://chldhca113qo2" path="res://taco.tscn" id="24_cugil"]
+[ext_resource type="AudioStream" uid="uid://qvyg8f61fke8" path="res://rockout2.mp3" id="25_2pufk"]
+[ext_resource type="Script" uid="uid://xycs4mrmsvra" path="res://ene1.gd" id="26_btc8u"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h6smj"]
+load_path = "res://.godot/imported/parallaxcitybuildings.png-e19ed4ba8dab2302264b9ad482462805.ctex"
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i5q7f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7iow1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i5q7f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_t8cg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_o5ykh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_e6ygx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_xlxjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_aocai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xwl8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3pas5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_u1jey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_51w4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ddgyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qh630")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_uv8er")
+}],
+"loop": 0,
+"name": &"1",
+"speed": 15.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"2",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i5q7f"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7iow1"]
+
+[sub_resource type="GDScript" id="GDScript_i2t4f"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5q7f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aicyk"]
+radius = 5.0797906
+
+[node name="level2" type="Node2D" unique_id=1441830641]
+script = ExtResource("1_btc8u")
+
+[node name="parallax" type="Sprite2D" parent="." unique_id=816990950]
+
+[node name="3" type="Parallax2D" parent="parallax" unique_id=895376896]
+scale = Vector2(0.23488918, 0.45402983)
+scroll_offset = Vector2(140.00002, 854)
+repeat_size = Vector2(3800, 0)
+autoscroll = Vector2(20, 0)
+repeat_times = 3
+
+[node name="Parallaxcitysky" type="Sprite2D" parent="parallax/3" unique_id=1457160452]
+position = Vector2(1316, -1280)
+texture = ExtResource("2_2pufk")
+
+[node name="6" type="Parallax2D" parent="parallax" unique_id=1468837242]
+scale = Vector2(-0.5185354, 0.3042685)
+scroll_offset = Vector2(386, -120)
+repeat_size = Vector2(3000, 0)
+autoscroll = Vector2(40, 0)
+repeat_times = 4
+
+[node name="Parallaxcitybackgroundmountain" type="Sprite2D" parent="parallax/6" unique_id=506387943]
+position = Vector2(-172, 1189)
+texture = ExtResource("3_btc8u")
+
+[node name="7" type="Parallax2D" parent="parallax" unique_id=1248191148]
+scroll_offset = Vector2(-217, -712)
+repeat_size = Vector2(2500, 0)
+autoscroll = Vector2(75, 0)
+
+[node name="Parallaxcitybackgroundmountain2" type="Sprite2D" parent="parallax/7" unique_id=1120828305]
+position = Vector2(1378, 978)
+texture = ExtResource("4_ikghu")
+
+[node name="1_1" type="Parallax2D" parent="parallax" unique_id=1180252775]
+scroll_offset = Vector2(-66, 283)
+repeat_size = Vector2(300, 0)
+autoscroll = Vector2(110, 0)
+repeat_times = 4
+
+[node name="Parallaxcitywater" type="Sprite2D" parent="parallax/1_1" unique_id=1527016194]
+position = Vector2(1431, 342.00003)
+scale = Vector2(0.75471693, 0.5637473)
+texture = ExtResource("5_i6smf")
+
+[node name="5" type="Parallax2D" parent="parallax" unique_id=676646682]
+scale = Vector2(0.30795085, 0.17546016)
+scroll_offset = Vector2(-605, 202.00002)
+repeat_size = Vector2(3800, 0)
+autoscroll = Vector2(135, 0)
+repeat_times = 3
+
+[node name="Parallaxcitybuildings" type="Sprite2D" parent="parallax/5" unique_id=1535011282]
+position = Vector2(150, 267)
+texture = SubResource("CompressedTexture2D_h6smj")
+
+[node name="1" type="Parallax2D" parent="parallax" unique_id=1164219268]
+scale = Vector2(0.38369375, 0.26720652)
+scroll_offset = Vector2(693, 176.00002)
+repeat_size = Vector2(3800, 0)
+autoscroll = Vector2(170, 0)
+repeat_times = 4
+
+[node name="Parallaxcitywaterreflexion" type="Sprite2D" parent="parallax/1" unique_id=760375424]
+position = Vector2(-25, 231)
+texture = ExtResource("6_d4rhq")
+
+[node name="ColorRect" type="ColorRect" parent="parallax" unique_id=1330112389]
+offset_left = -13.0
+offset_top = 516.99994
+offset_right = 27.0
+offset_bottom = 556.99994
+scale = Vector2(29.44099, 1.8119926)
+color = Color(0.09411765, 0.09411765, 0.09411765, 1)
+
+[node name="good2" type="Parallax2D" parent="parallax" unique_id=161465808]
+scale = Vector2(0.95834523, 2.0632727)
+scroll_offset = Vector2(-268, -1009)
+repeat_size = Vector2(300, 0)
+autoscroll = Vector2(70, 0)
+repeat_times = 5
+
+[node name="Screenshot20260708152136" type="Sprite2D" parent="parallax/good2" unique_id=980241339]
+position = Vector2(635, 737)
+rotation = 3.1415927
+texture = ExtResource("7_ldfcd")
+
+[node name="good" type="Parallax2D" parent="parallax" unique_id=27750870]
+scale = Vector2(0.9583452, 2.0632725)
+scroll_offset = Vector2(-246.00002, -907)
+repeat_size = Vector2(300, 0)
+autoscroll = Vector2(70, 0)
+repeat_times = 5
+
+[node name="Screenshot20260708152136" type="Sprite2D" parent="parallax/good" unique_id=1432298229]
+position = Vector2(635, 737)
+texture = ExtResource("7_ldfcd")
+
+[node name="floor" type="StaticBody2D" parent="." unique_id=1048688906]
+position = Vector2(480, 624)
+scale = Vector2(84.93448, -1.2548091)
+physics_material_override = SubResource("PhysicsMaterial_i5q7f")
+
+[node name="1" type="CollisionShape2D" parent="floor" unique_id=1362677772]
+position = Vector2(0, -7.1724057)
+scale = Vector2(0.59098643, 0.12946773)
+shape = SubResource("RectangleShape2D_7iow1")
+
+[node name="ColorRect" type="ColorRect" parent="floor/1" unique_id=2029493205]
+offset_left = -9.821671
+offset_top = 67.71007
+offset_right = 36.83607
+offset_bottom = 284.08997
+color = Color(1, 0.0627451, 0.15686275, 0.12156863)
+
+[node name="floor2" type="StaticBody2D" parent="." unique_id=2145017577]
+position = Vector2(480, 624)
+scale = Vector2(84.93448, -1.2548091)
+physics_material_override = SubResource("PhysicsMaterial_i5q7f")
+
+[node name="1" type="CollisionShape2D" parent="floor2" unique_id=184517160]
+position = Vector2(0, -7.1724057)
+scale = Vector2(1.0133127, 0.10680797)
+shape = SubResource("RectangleShape2D_7iow1")
+
+[node name="ene" parent="." unique_id=527797653 instance=ExtResource("8_41lt0")]
+position = Vector2(623, 271)
+scale = Vector2(4, 4.402)
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ene" unique_id=1308206554]
+visible = false
+position = Vector2(0.25, -7.269422)
+scale = Vector2(0.01509995, 0.010278143)
+sprite_frames = SubResource("SpriteFrames_i5q7f")
+animation = &"1"
+
+[node name="CharacterBody2D" parent="." unique_id=1294074959 instance=ExtResource("21_653n8")]
+position = Vector2(294, 583)
+
+[node name="char area" type="Area2D" parent="CharacterBody2D" unique_id=449323948]
+position = Vector2(5.070094, -1.4275393)
+scale = Vector2(2.5674264, 1.279889)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/char area" unique_id=130623320]
+position = Vector2(-3, 2)
+scale = Vector2(0.5817354, 1.7993681)
+shape = SubResource("CapsuleShape2D_i5q7f")
+
+[node name="life" parent="." unique_id=131343365 instance=ExtResource("22_eqpf5")]
+position = Vector2(970, 5)
+scale = Vector2(0.54672647, 0.6086565)
+
+[node name="A" type="Sprite2D" parent="." unique_id=1169835335]
+position = Vector2(41, 39)
+scale = Vector2(0.16751479, 0.1555125)
+texture = ExtResource("23_qm6bn")
+
+[node name="Label" type="Label" parent="A" unique_id=1300412793]
+offset_left = -202.96716
+offset_top = -270.07477
+offset_right = -142.96716
+offset_bottom = -247.07477
+scale = Vector2(4.9939613, 5.470023)
+text = "To Play:"
+
+[node name="rightcol" type="Area2D" parent="." unique_id=1773199594]
+position = Vector2(1411, 519)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightcol" unique_id=1352242361]
+shape = SubResource("CapsuleShape2D_7iow1")
+
+[node name="rightcolboxes" type="Sprite2D" parent="." unique_id=1631762171]
+position = Vector2(1414, 609)
+
+[node name="rightcol2" type="Area2D" parent="rightcolboxes" unique_id=51846153]
+position = Vector2(-2, -50)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightcolboxes/rightcol2" unique_id=35950397]
+shape = SubResource("CapsuleShape2D_7iow1")
+
+[node name="rightcol3" type="Area2D" parent="rightcolboxes" unique_id=872542206]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightcolboxes/rightcol3" unique_id=1923482003]
+shape = SubResource("CapsuleShape2D_7iow1")
+
+[node name="leftcolbox" type="Sprite2D" parent="." unique_id=1805682769]
+
+[node name="Area2D" type="Area2D" parent="leftcolbox" unique_id=1191448660]
+position = Vector2(-154, 517)
+scale = Vector2(1.6792635, 2.1964328)
+script = SubResource("GDScript_i2t4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftcolbox/Area2D" unique_id=380937783]
+shape = SubResource("CircleShape2D_i5q7f")
+
+[node name="Area2D2" type="Area2D" parent="leftcolbox" unique_id=1313269930]
+position = Vector2(-157, 563)
+scale = Vector2(1.6792635, 2.1964328)
+script = SubResource("GDScript_i2t4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftcolbox/Area2D2" unique_id=1059470236]
+shape = SubResource("CircleShape2D_i5q7f")
+
+[node name="Area2D3" type="Area2D" parent="leftcolbox" unique_id=123688547]
+position = Vector2(-158, 609)
+scale = Vector2(1.6792635, 2.1964328)
+script = SubResource("GDScript_i2t4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftcolbox/Area2D3" unique_id=800543705]
+shape = SubResource("CircleShape2D_i5q7f")
+
+[node name="taco" parent="." unique_id=406714753 instance=ExtResource("24_cugil")]
+visible = false
+position = Vector2(-107.00001, 499)
+scale = Vector2(0.15, 0.15)
+
+[node name="Area2D" type="Area2D" parent="taco" unique_id=862287561]
+position = Vector2(-133.33333, -6.666666)
+
+[node name="1" type="CollisionShape2D" parent="taco/Area2D" unique_id=1344506978]
+position = Vector2(253.33336, 146.66684)
+scale = Vector2(-24.16941, -24.750193)
+shape = SubResource("CircleShape2D_aicyk")
+
+[node name="Timer" type="Timer" parent="." unique_id=1066941013]
+wait_time = 45.0
+
+[node name="Label" type="Label" parent="." unique_id=1760542385]
+offset_left = 1001.0
+offset_top = 67.0
+offset_right = 1041.0
+offset_bottom = 90.0
+
+[node name="Timer2" type="Timer" parent="." unique_id=454726737]
+wait_time = 0.653
+autostart = true
+
+[node name="Timer3" type="Timer" parent="." unique_id=2135445813]
+
+[node name="Rockout2" type="AudioStreamPlayer" parent="." unique_id=567088985]
+stream = ExtResource("25_2pufk")
+autoplay = true
+
+[node name="ene2" parent="." unique_id=607362534 instance=ExtResource("8_41lt0")]
+position = Vector2(1119.0001, 687)
+scale = Vector2(10, 11.005)
+script = ExtResource("26_btc8u")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ene2" unique_id=1194494060]
+visible = false
+position = Vector2(0.25, -7.269422)
+scale = Vector2(0.01509995, 0.010278143)
+sprite_frames = SubResource("SpriteFrames_i5q7f")
+animation = &"1"
+
+[connection signal="animation_finished" from="ene/AnimatedSprite2D2" to="." method="finishboom"]
+[connection signal="body_entered" from="CharacterBody2D/char area" to="." method="eat"]
+[connection signal="body_entered" from="CharacterBody2D/char area" to="." method="hit"]
+[connection signal="body_entered" from="rightcol" to="." method="righreset"]
+[connection signal="body_entered" from="rightcolboxes/rightcol2" to="." method="righreset"]
+[connection signal="body_entered" from="rightcolboxes/rightcol3" to="." method="righreset"]
+[connection signal="body_entered" from="leftcolbox/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="leftcolbox/Area2D2" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="leftcolbox/Area2D3" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="taco/Area2D" to="." method="eat"]
+[connection signal="timeout" from="Timer" to="." method="leveldone"]
+[connection signal="timeout" from="Timer2" to="." method="ene_move"]
+[connection signal="timeout" from="Timer3" to="." method="tacoreset"]
+[connection signal="animation_finished" from="ene2/AnimatedSprite2D2" to="." method="finishboom"]
